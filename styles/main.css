@@ -52,6 +52,7 @@ body {
     > * {
       flex: 0 0 100%;
     }
+    overflow-x: hidden;
 }
 .scrollable{
     display: flex;
@@ -524,6 +525,8 @@ body {
 
 .social-links {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
