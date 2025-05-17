@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Blog - Collections</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/collections.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.svg" alt="Fashion Blog Logo" class="logo-image">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html" class="active">Collections</a></li>
+                <li><a href="trends.html">Trends</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner" id="sale-banner">
+        <img src="https://marketplace.canva.com/EAGY_oKTYME/2/0/1600w/canva-black-and-gold-modern-fashion-store-banner-wFnNihlqAys.jpg">
+    </section>
+
+    <main class="collections-main">
+        <!-- code -->
+    <div class="nav2">
+        <ul class="nav2">
+        <li><a href="collection/bestseller.html">BEST SELLER</a></li>
+        <li><a href="collection/dresses.html">DRESSES</a></li>
+        <li><a href="collection/tops.html">TOPS</a></li>
+        <li><a href="collection/trousers.html">TROUSERS</a></li>
+        <li><a href="collection/hoodies.html">HOODIES $ SETS</a></li>
+        <li><a href="collection/accessorries.html">ACCESSORIES</a></li>
+        </ul>
+    </div>
+
+    <br>
+    <p class="all-clothing"><b><center>All Clothing</center></b></p>
+      <!-- this <div> is for 1904 clothing -->
+        <div class="product-count" >
+                1904 products
+        </div>
+    <div class="top-bar"> 
+        <!-- this <div> is for filters -->
+          <button class="filter-toggle" onclick="toggleFilters()">Filters</button>
+
+          <div class="filters" id="filterPanel" style="display: none;">
+
+            <button type="submit">Apply Filters</button><br><br>
+            <div class="filter-section">
+                <label><b>Price:</b></label><br>
+                ₹<input type="number" id="minPrice" value="0" onchange="applyFilters()"> -
+                ₹<input type="number" id="maxPrice" value="5000" onchange="applyFilters()">
+            </div>
+        
+            <div class="filter-section">
+              <label><b>Size:</b></label><br>
+              <label><input type="checkbox" value="XS" class="size-filter" onchange="applyFilters()"> XS</label><br>
+              <label><input type="checkbox" value="S" class="size-filter" onchange="applyFilters()"> S</label><br>
+              <label><input type="checkbox" value="M" class="size-filter" onchange="applyFilters()"> M</label><br>
+              <label><input type="checkbox" value="L" class="size-filter" onchange="applyFilters()"> L</label><br>
+              <label><input type="checkbox" value="Free size" class="size-filter" onchange="applyFilters()">Free Size (Fits XS to L)</label><br>
+            </div>
+          
+        
+         
+          <div class="filter-section" id="productContainer">
+            <label><b>Sort by</b></label><br>
+            <label><input type="checkbox" value="Best Selling" class="size-filter" onchange="applyFilters()"> Best Selling</label><br>
+            <label><input type="checkbox" value="Alphabetically, A-Z" class="size-filter" onchange="applyFilters()"> Alphabetically, A-Z</label><br>
+            <label><input type="checkbox" value="Alphabetically, Z-A" class="size-filter" onchange="applyFilters()"> Alphabetically, Z-A</label><br>
+            <label><input type="checkbox" value="Price, low to high" class="size-filter" onchange="applyFilters()"> Price, low to high</label>
+            <label><input type="checkbox" value="Price, high to low" class="size-filter" onchange="applyFilters()">Price, high to low</label><br>
+            <label><input type="checkbox" value="Date, old to new" class="size-filter" onchange="applyFilters()">Date, old to new</label><br>
+            <label><input type="checkbox" value="Date, new to old" class="size-filter" onchange="applyFilters()">Date, new to old</label><br>
+          </div>
+
+         
+        </div>
+
+        
+
+         <!-- this <div> is the side icon -->
+        <div class="sort-options">
+            <label for="sort">Sort by</label><br>
+                <select id="sort" onchange="applyFilters()">
+                        <option value="best">Best Selling</option>
+                        <option value="az">Alphabetically, A-Z</option>
+                        <option value="za">Alphabetically, Z-A</option>
+                        <option value="low">Price, low to high</option>
+                        <option value="high">Price, high to low</option>
+                        <option value="old">Date, old to new</option>
+                        <option value="new">Date, new to old</option>
+                </select>
+        </div>
+    </div>
+
+
+    <div class="image-grid">
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Two_Piece_Set_Aesthetics_Black_Top_With_Trouser_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_15_a782deeb-b72c-4d72-8b05-a52180c05d9b.avif">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Green Wafle Knit Shirt</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 799.00</p>
+        <p class="price-original">Rs. 1,299.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+         <img src="collection page img/Matching_Set_of_Vest_Coat_and_Trousers_in_Cappucino_460x.webp">
+       <div class="image-overlay">
+         <button class="buy-now-btn">Buy Now</button>
+         <button class="add-cart-btn">Add to Cart</button>
+       </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Brown Top</h3>
+       <div class="price-row">
+         <p class="price-discounted">Rs. 1,099.00</p>
+         <p class="price-original">Rs. 2,499.00</p>
+       </div>
+     </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+         <img src="collection page img/PERCIVAL_MENSWEAR_7_da1533a7-f065-4890-b789-ae16d8362bd3.avif">
+       <div class="image-overlay">
+         <button class="buy-now-btn">Buy Now</button>
+         <button class="add-cart-btn">Add to Cart</button>
+       </div>
+       <h3 class="product-title">Formal Shirts: Blue Linning</h3>
+       <div class="price-row">
+         <p class="price-discounted">Rs. 1,099.00</p>
+         <p class="price-original">Rs. 2,499.00</p>
+         <p class="sale-label">Sale</p>
+       </div>
+     </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Combo_Set_Of_Two_Light_Brown_Black_Premium_Trousers_360x.webp">
+       <div class="image-overlay">
+         <button class="buy-now-btn">Buy Now</button>
+         <button class="add-cart-btn">Add to Cart</button>
+       </div>
+       <h3 class="product-title">Formal Trousers: Black & Brown</h3>
+       <div class="price-row">
+         <p class="price-discounted">Rs. 799.00</p>
+         <p class="price-original">Rs. 2,499.00</p>
+         <p class="sale-label">Sale</p>
+       </div>
+     </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/f1d4802c9c39391020211dc1fb328304_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Middy: Pink Bodycon Middy</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,199.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/130aab2a6fd1a12ddd7842a4ea1d04513e255b72.avif">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Hoodies : Blue hoodies for kids</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 499.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/DR1680_1_1_460x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Middy: whitte floral Middy</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs.999.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_ea67e555-1397-440a-a35f-ee92c727a336.avif">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Corset_Style_Puff_Sleeve_Floral_Top_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/a990adcfb4c3fc1fabd60695636a652f3f08ebbe.avif">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Cropped_Vest_Ruffle_Top_In_Blush_Pink_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Combo_Set_Of_Two_Light_Brown_Black_Premium_Trousers_360x (1).webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_4_2ef99005-5330-4cea-8521-57de3d8984b2.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/High_Flare_Black_Ribbed_Trouser_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Korean_Style_Baggy_Black_Trouser_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_5_5791a030-d357-4312-8150-4aca9249a065.avif">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+         <img src="collection page img/Trending_Baggy_Brown_Korean_Pants_In_Premium_Qualityae41ca9eba12390ba2ac918_5a157c66-d30a-4e12-a3e9-76453515225e_360x.webp">
+         <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+         <img src="collection page img/PERCIVAL_MENSWEAR_1_1fbc4481-abd4-45f4-8351-ce303c078234.webp">
+         <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Combo_Set_Of_Two_White_Black_Premium_Trousers_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+        <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Corset_Style_Tie_Around_Full_Sleeve_Ribbed_Black_Top_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+         <img src="collection page img/Combo_Set_Of_Two_Black_Brown_Premium_Trousers_360x.webp">
+         <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+         <img src="collection page img/fee6b9a6cadc71e4393c4bbaf1cc3870882f3a50.avif">
+         <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Collar_Striped_Long_Sleeve_Shirt_460x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/50a_1_5e86f1d3-b7d2-40e7-ab19-3a085db3ef7c_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/V_Neck_Front_Knot_Floral_Print_Flare_Long_Sleeve_Top_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/0493d2b46c5c6cbdab542323d1c17ecc36358997.avif">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/High_Waist_Pleated_Trouser_In_White_360x.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_3_9b6c8cf4-7060-470a-9a1a-f6a356b098d9.webp">
+        <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      
+      <div class="image-items" data-price="799" data-size="Free size">
+
+         <img src="collection page img/Two_Piece_Set_Aesthetics_White_Top_With_Trouser_360x.webp">
+         <div class="image-overlay">
+          <button class="buy-now-btn">Buy Now</button>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+         <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+         <img src="collection page img/cad51529eef7f9ad8bdce387f1e6e8f2_360x.webp">
+         <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+         <img src="collection page img/2c1a1ba34606617befd42e31b2552d3654683836.avif">
+        <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_3_5a5073f6-0789-482a-bb0d-84a074af90f4.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_d0106469-9133-4688-a199-25756359d89d.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Black_Ribbed_Wide_Leg_Trousers_360x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_3_5fff9922-8c2c-481d-bdba-33736dbe183f.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Solid_Color_Ruched_Drawstring_Midi_Dress_In_Black_360x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/a14c12ffc23ad564a90ecbd0679dcda1_360x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+       <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/4f2dca6c58eac4d560b87450f0e91f0975383a18.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Korean_Style_Baggy_Offwhite_Trouser_360x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/dbe57a90d86f5837ecb8ca45ac498998cd407d79.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/aa352c479da2491a77d9ef5c89b0b069b955d875.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Ruched_Off-Shoulder_Short_Sleeve_Crop_Top_In_Black_460x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/3237ba29ca5950d63cec3e6b040f6475b9563648.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Corset_Style_Tie_Around_White_Ribbed_Full_Sleeve_Top_460x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Corset_Style_Tie_Around_Full_Sleeve_Ribbed_Apricot_Top_460x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_12_d98ab376-0fb3-4196-8202-1acff61cda23.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_2_a7ab9ee2-db8b-4a48-888c-81b13cdff973.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/789f7e5d0f58cec9cd570ceccaf8c470_460x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Floral_Leaf_Printed_Sheer_Mini_Dress_460x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/PERCIVAL_MENSWEAR_-3_a8869a78-0e6f-4946-942a-e495f1187f54.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/3237ba29ca5950d63cec3e6b040f6475b9563648.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/Black_Top_and_Leopard_Print_Midi_Skirt_460x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/High_Waist_Pleated_Pants_With_Tailored_Vest_Style_Top_In_White_460x.webp">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/af7f2d7876525ca81e3b8ff516eac194c059b282.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div>
+
+      <div class="image-items" data-price="799" data-size="Free size">
+
+        <img src="collection page img/425c0491c9f0178e43357fe53e088493eff2156b.avif">
+       <h3 class="product-title">Two piece Set : Aesthetics Black Top</h3>
+        <div class="price-row">
+        <p class="price-discounted">Rs. 1,099.00</p>
+        <p class="price-original">Rs. 2,499.00</p>
+        <p class="sale-label">Sale</p>
+        </div>
+      </div> 
+
+
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your ultimate destination for fashion trends and style inspiration.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fashion Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a></li>
+            <li><a href="collections.html" class="active">
+                <i class="fas fa-tshirt"></i>
+                <span>Collections</span>
+            </a></li>
+            <li><a href="trends.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Trends</span>
+            </a></li>
+            <li><a href="blog.html">
+                <i class="fas fa-blog"></i>
+                <span>Blog</span>
+            </a></li>
+            <li><a href="about.html">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </a></li>
+            <li><a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mobile-nav.js"></script>
+</body>
+</html>

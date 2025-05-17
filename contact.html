@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Blog - Contact</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.svg" alt="Fashion Blog Logo" class="logo-image">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="trends.html">Trends</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <div class="container">
+            <div class="left">
+                <h3 class="heading">Get In Touch</h3>
+                <p class="text">We are here for you! How can we help?</p>
+                <form action="#" name="myForm">
+                    <div class="inputBox" id="name">
+                        <input
+                        type="text"
+                        name="name"
+                        class="name"
+                        placeholder="Enter your name" required/><span class="formerror"></span>
+                    </div>
+                    <div class="inputBox" id="email">
+                        <input
+                        type="text"
+                        name="email"
+                        class="email"
+                        placeholder="Enter your email address" /><span class="formerror"></span>
+                    </div>
+                    <div class="inputBox" id="message">
+                        <textarea
+                        name="message"
+                        class="message"
+                        placeholder="Enter your message" ></textarea><span class="formerror"></span>
+                    </div>
+                    <button class="btn">Submit</button>
+                </form>
+            </div>
+            <div class="right">
+                <div class="infoBox">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="text">
+                        <p>750183 Bhubaneshwar, India</p>
+                    </div>
+                </div>
+                <div class="infoBox">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text">
+                        <a href="tel:+918569456210">+91 9876-5431-11</a>
+                    </div>
+                </div>
+                <div class="infoBox">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                        <a href="mailto:example@gmail.com">contact@museindia.com</a>
+                    </div>
+                </div>
+    
+                <div class="social-media">
+                    <p>Connect with us :</p>
+                    <div class="social-icons">
+                      <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+        
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your ultimate destination for fashion trends and style inspiration.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fashion Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a></li>
+            <li><a href="collections.html">
+                <i class="fas fa-tshirt"></i>
+                <span>Collections</span>
+            </a></li>
+            <li><a href="trends.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Trends</span>
+            </a></li>
+            <li><a href="blog.html">
+                <i class="fas fa-blog"></i>
+                <span>Blog</span>
+            </a></li>
+            <li><a href="about.html">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </a></li>
+            <li><a href="contact.html" class="active">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mobile-nav.js"></script>
+</body>
+</html>

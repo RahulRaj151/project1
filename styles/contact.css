@@ -1,0 +1,176 @@
+
+
+  
+/* Body Styling */
+  .contact-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: aliceblue;
+  }
+  .container-main {
+    background: aliceblue;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  /* Container */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+  }
+  
+  /* Left Section (Form) */
+  .left {
+    flex: 1 1 400px;
+    padding: 2rem;
+    background: #ffffff;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f78ca0;
+  }
+  
+  .left .text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+  }
+  
+  .inputBox {
+    margin-bottom: 1.2rem;
+    position: relative;
+  }
+  
+  .inputBox input,
+  .inputBox textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .inputBox input:focus,
+  .inputBox textarea:focus {
+    border-color: #f78ca0;
+    outline: none;
+  }
+  
+  .inputBox textarea {
+    resize: none;
+    min-height: 120px;
+  }
+  
+  .formerror {
+    color: red;
+    font-size: 0.85rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+  }
+  
+  /* Button */
+  .btn {
+    background: #f78ca0;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #ec407a;
+  }
+  
+  /* Right Section (Contact Info) */
+  .right {
+    flex: 1 1 300px;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .infoBox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .infoBox .icon {
+    font-size: 1.5rem;
+    color: #d81b60;
+  }
+  
+  .infoBox .text a,
+  .infoBox .text p {
+    color: #444;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  /* Social Media */
+  .social-media p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #d81b60;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .social-icons a {
+    font-size: 1.4rem;
+    color: #fff;
+    background: #d81b60;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background: #ec407a;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left, .right {
+      flex: 1 1 100%;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }
+  
